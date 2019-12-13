@@ -1,12 +1,32 @@
 {
-  "name": "ava-vue-trading-view-component",
+  "name": "@curder/ava-vue-trading-view-component",
+  "description": "ava vue trading view 站点股票走势图组件",
+  "author": "curder <q.curder@gmail.com>",
   "version": "0.1.0",
-  "private": true,
+  "license": "MIT",
+  "main": "dist/main.js",
+  "keywords": [
+    "npm",
+    "component",
+    "vuejs",
+    "vue",
+    "vue.js",
+    "ava",
+    "trading-view"
+  ],
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "watch": "cross-env NODE_ENV=development webpack-dev-server --hot --config=./examples/webpack.config.js",
+    "docs": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=./examples/webpack.config.js",
+    "prod": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=./webpack.config.js",
     "lint": "vue-cli-service lint"
   },
+  "files": [
+    "/src/*",
+    "/dist/*",
+    "*.json",
+    "*.js",
+    "!/postcss.config.js"
+  ],
   "dependencies": {
     "core-js": "^3.4.3",
     "vue": "^2.6.10"
@@ -16,9 +36,17 @@
     "@vue/cli-plugin-eslint": "^4.1.0",
     "@vue/cli-service": "^4.1.0",
     "babel-eslint": "^10.0.3",
+    "cross-env": "^6.0.3",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.6.10"
+    "node-sass": "^4.13.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "purgecss-webpack-plugin": "^1.6.0",
+    "sass-loader": "^8.0.0",
+    "tailwindcss": "^1.1.4",
+    "vue-router": "^3.1.3",
+    "vue-template-compiler": "^2.6.10",
+    "webpack-cli": "^3.3.10"
   },
   "eslintConfig": {
     "root": true,
@@ -33,9 +61,5 @@
     "parserOptions": {
       "parser": "babel-eslint"
     }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ]
+  }
 }
