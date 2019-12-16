@@ -1,8 +1,5 @@
 <template>
-  <trading-view
-    src="https://s3.tradingview.com/tv.js"
-    :options="options"
-  ></trading-view>
+  <trading-view src="https://s3.tradingview.com/tv.js" :options="options"></trading-view>
 </template>
 <script>
 export default {

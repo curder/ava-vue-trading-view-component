@@ -19,7 +19,12 @@ export default {
     }
   },
 
-  mounted() {},
+  mounted() {
+    if (this.options.container_id) {
+      // 如果存在container_id 则删除它，避免组件渲染完独占一屏
+      delete this.options.container_id;
+    }
+  },
 
   components: { VueTradingView }
 };
