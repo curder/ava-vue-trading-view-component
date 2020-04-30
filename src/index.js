@@ -11,7 +11,9 @@ const Plugin = {
     let { componentName } = params
 
     // 注册私有属性
-    Vue.prototype.$ava = {}
+    if (Object.keys(Vue.prototype.$ava).length === 0) {
+      Vue.prototype.$ava = {}
+    }
     Vue.prototype.$ava.trading_view = {}
 
     // 注册组件
